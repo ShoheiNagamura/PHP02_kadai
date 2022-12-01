@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/seller_signup.css">
     <title>PHP課題02</title>
 </head>
 
@@ -18,7 +18,7 @@
     <header>
         <div class="header-title">
             <a href="./index.php">
-                <h1>事業マッチング</h1>
+                <h1>店舗・販売者マッチングサイト</h1>
             </a>
         </div>
         <nav>
@@ -57,6 +57,22 @@
     </header>
 
     <main>
+        <div class="signup-form">
+            <h2>販売者アカウント新規登録</h2>
+            <p>販売者をしたい方は下記からご登録ください</p>
+            <form action="">
+                <label for="name">ユーザー名</label>
+                <input type="text" id="name" name="name">
+                <label for="email">メールアドレス</label>
+                <input type="email" id="email" name="email">
+                <label for="password">パスワード</label>
+                <input type="password" id="password" name="password">
+                <label for="conf-password">確認パスワード</label>
+                <input type="password" id="conf-password" name="conf-password">
+                <button>登録</button>
+            </form>
+        </div>
+
 
     </main>
 

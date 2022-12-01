@@ -19,7 +19,7 @@
     <header>
         <div class="header-title">
             <a href="./index.php">
-                <h1>事業マッチング</h1>
+                <h1>店舗・販売者マッチングサイト</h1>
             </a>
         </div>
         <nav>

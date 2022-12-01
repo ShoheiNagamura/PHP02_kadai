@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/order_login.css">
     <title>PHP課題02</title>
 </head>
 
@@ -18,7 +18,7 @@
     <header>
         <div class="header-title">
             <a href="./index.php">
-                <h1>事業マッチング</h1>
+                <h1>店舗・販売者マッチングサイト</h1>
             </a>
         </div>
         <nav>
