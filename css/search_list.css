@@ -81,6 +81,11 @@ nav {
     flex-direction: column;
 }
 
+.main-area h2 {
+    font-size: 48px;
+    margin: 80px;
+}
+
 .hoge-area {
     display: flex;
     justify-content: center;
@@ -98,6 +103,8 @@ nav {
     justify-content: end;
     align-items: center;
     flex-direction: column;
+    border-radius: 2%;
+    box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.45);
 }
 
 .seller-item {

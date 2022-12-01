@@ -12,7 +12,7 @@ try {
 }
 
 //selectのSQLクエリ用意
-$sql = 'SELECT * FROM seller_users';
+$sql = 'SELECT * FROM seller_users order by update_time DESC';
 $stmt = $pdo->prepare($sql);
 
 //SQL実行するがまだデータの取得はできていない
