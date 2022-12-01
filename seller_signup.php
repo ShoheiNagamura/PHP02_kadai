@@ -60,7 +60,7 @@
         <div class="signup-form">
             <h2>販売者アカウント新規登録</h2>
             <p>販売者をしたい方は下記からご登録ください</p>
-            <form action="">
+            <form action="sellerUserCreate.php" method="POST">
                 <label for="name">ユーザー名</label>
                 <input type="text" id="name" name="name">
                 <label for="email">メールアドレス</label>
