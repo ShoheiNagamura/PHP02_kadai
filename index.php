@@ -1,6 +1,7 @@
 <?php
 
 
+
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +25,7 @@
         </div>
         <nav>
             <ul class="header-nav">
-                <a href="./search list.php">
+                <a href="./search_list.php">
                     <li>依頼できる人一覧</li>
                 </a>
                 <li class="signup">新規登録

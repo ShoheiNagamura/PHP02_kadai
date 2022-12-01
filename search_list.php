@@ -1,4 +1,53 @@
 <?php
+//DB接続
+$dbn = 'mysql:dbname=kadai;charset=utf8mb4;port=3306;host=localhost';
+$user = 'root';
+$pwd = '';
+
+try {
+    $pdo = new PDO($dbn, $user, $pwd);
+} catch (PDOException $e) {
+    echo json_encode(["db error" => "{$e->getMessage()}"]);
+    exit();
+}
+
+//selectのSQLクエリ用意
+$sql = 'SELECT * FROM seller_users';
+$stmt = $pdo->prepare($sql);
+
+//SQL実行するがまだデータの取得はできていない
+try {
+    $status = $stmt->execute();
+} catch (PDOException $e) {
+    echo json_encode(["sql error" => "{$e->getMessage()}"]);
+    exit();
+}
+
+//fectchAllでデータの取得
+if ($status == false) {
+    $error = $stmt->errorInfo();
+    exit('sqlError:' . $error[2]);
+} else {
+    // PHPではデータを取得するところまで実施
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+// echo "<pre>";
+// var_dump($result);
+// echo "</pre>";
+
+$output = "";
+
+foreach ($result as $record) {
+    $output .= "
+        <div class='seller-items'>
+            <p class='seller-item seller-name'>名前: {$record["name"]}</p>
+            <p class='seller-item seller-email'>Email: {$record["email"]}</p>
+            <p class='seller-item seller-update_time'>更新日: {$record["update_time"]}</p>
+        </div>
+    ";
+}
+
 
 
 ?>
@@ -10,7 +59,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/search list.css">
+    <link rel="stylesheet" href="./css/search_list.css">
     <title>PHP課題02</title>
 </head>
 
@@ -57,6 +106,13 @@
     </header>
 
     <main>
+        <div class="main-area">
+            <h2>ご依頼する方をお選びください</h2>
+            <div class="hoge-area">
+                <?= $output ?>
+            </div>
+        </div>
+
 
     </main>
 
