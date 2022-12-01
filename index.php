@@ -25,7 +25,7 @@
         <nav>
             <ul class="header-nav">
                 <a href="./search list.php">
-                    <li>一覧画面</li>
+                    <li>依頼できる人一覧</li>
                 </a>
                 <li class="signup">新規登録
                     <ul class="signup-down">
