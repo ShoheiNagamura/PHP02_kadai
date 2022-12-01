@@ -69,3 +69,37 @@ nav {
 .seller-login:hover {
     background-color: aquamarine;
 }
+
+
+/* メインーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+
+.main-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hoge-area {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.seller-items {
+    width: 30%;
+    height: 400px;
+    margin: 20px;
+    padding-bottom: 20px;
+    border: 2px solid gray;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.seller-item {
+    margin: 5px;
+}

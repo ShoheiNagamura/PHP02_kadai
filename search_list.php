@@ -40,11 +40,12 @@ $output = "";
 
 foreach ($result as $record) {
     $output .= "
-        <tr>
-          <td>{$record["name"]}</td>
-          <td>{$record["email"]}</td>
-        </tr>
-      ";
+        <div class='seller-items'>
+            <p class='seller-item seller-name'>名前: {$record["name"]}</p>
+            <p class='seller-item seller-email'>Email: {$record["email"]}</p>
+            <p class='seller-item seller-update_time'>更新日: {$record["update_time"]}</p>
+        </div>
+    ";
 }
 
 
@@ -58,7 +59,7 @@ foreach ($result as $record) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/search list.css">
+    <link rel="stylesheet" href="./css/search_list.css">
     <title>PHP課題02</title>
 </head>
 
@@ -105,9 +106,13 @@ foreach ($result as $record) {
     </header>
 
     <main>
-        <table>
-            <?= $output ?>
-        </table>
+        <div class="main-area">
+            <h2>ご依頼する方をお選びください</h2>
+            <div class="hoge-area">
+                <?= $output ?>
+            </div>
+        </div>
+
 
     </main>
 
